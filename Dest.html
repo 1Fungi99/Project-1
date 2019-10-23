@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="assets/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/dest.css">
+  <script src="assets/dest.js"></script>
+
+  <title>Travel Shit</title>
+
+</head>
+
+<body>
+
+
+  <nav class="navbar fixed-top" style="background: #4040a1; ">
+    <span class="navbar-brand mb-0 h1" style="color: white;">Destination Station</span>
+    <ul class="nav nav-pills card-header-pills">
+      <li class="nav-item">
+        <a class="nav-link" style="color: white;" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" style="color: white;" href="Dest.html">Destinations</a>
+      </li>
+    </ul>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="card" style="width: 18rem;">
+      <div class="card-header" style="font-weight: bold;">
+        Destinations:
+      </div>
+      <ul class="list-group list-group-flush">
+        <li id="dest-items" class="list-group-item" data-dest="barcelona">Barcelona</li>
+        <li id="dest-items" class="list-group-item" data-dest="berlin">Berlin</li>
+        <li id="dest-items" class="list-group-item" data-dest="iceland">Iceland</li>
+        <li id="dest-items" class="list-group-item" data-dest="london">London</li>
+        <li id="dest-items" class="list-group-item" data-dest="paris">Paris</li>
+        <li id="dest-items" class="list-group-item" data-dest="rome">Rome</li>
+        <li id="dest-items" class="list-group-item" data-dest="salzburg">Salzburg</li>
+        <li id="dest-items" class="list-group-item" data-dest="singapore">Singapore</li>
+        <li id="dest-items" class="list-group-item" data-dest="tokyo">Tokyo</li>
+      </ul>
+    </div>
+
+
+    <!-- <div class="dest-title">
+      <h1>Possible Destinations</h1>
+    </div>
+    <div class="card-deck">
+
+
+
+      <div class="card-row">
+        <div class="card align-items-center">
+          <img src="assets/images/barcelona.jpg">
+          <div class="card-body">
+            <h2 class="name">Name</h2>
+            <h3 class="description">Description</h3>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/berlin.jpeg">
+          <div class="card-body">
+            <h2 class="name">Name</h2>
+            <h3 class="description">Description</h3>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/iceland.jpg">
+          <div class="card-body">
+            <h2 class="name">Name</h2>
+            <h3 class="description">Description</h3>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card-row">
+        <div class="card">
+          <img src="assets/images/london.jpg">
+          <div class="card-body">
+            <h2 class="name">Name</h2>
+            <h3 class="description">Description</h3>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/Paris.jpg">
+          <div class="card-body">
+            <h2 class="name">Name</h2>
+            <h3 class="description">Description</h3>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/Rome.jpg">
+          <div class="card-body">
+            <h2 class="name">Name</h2>
+            <h3 class="description">Description</h3>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card-row">
+        <div class="card">
+          <img src="assets/images/salzburg.jpeg">
+          <div class="card-body">
+            <h2 class="name">Name</h2>
+            <h3 class="description">Description</h3>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/singapore.jpg">
+          <div class="card-body">
+            <h2 class="name">Name</h2>
+            <h3 class="description">Description</h3>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/tokyo.jpg">
+          <div class="card-body">
+            <h2 class="name">Name</h2>
+            <h3 class="description">Description</h3>
+          </div>
+        </div>
+      </div> -->
+
+  </div>
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>
