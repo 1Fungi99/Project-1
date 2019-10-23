@@ -1,0 +1,12 @@
+var question = true
+var destinations = [];
+destinations[0] = 'Paris';
+destinations[1] = 'Rome';
+destinations[2] = 'August West';
+destinations[2] = 'August West';
+destinations[2] = 'August West';
+destinations[2] = 'August West';
+destinations[2] = 'August West';
+destinations[2] = 'August West';
+destinations[2] = 'August West';
+destinations[2] = 'August West';
