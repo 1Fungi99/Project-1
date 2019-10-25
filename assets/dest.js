@@ -12,8 +12,6 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(queryURL);
-            console.log(response);
             $(".city").html("<h2>" + response.name + "</h2>");
             $('.wind').html("<h5>Wind Speed: " + response.wind.speed + " m/s </h5>");
             $('.humidity').html("<h5>Humidity: " + response.main.humidity + "%</h5>");

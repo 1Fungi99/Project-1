@@ -2,3 +2,7 @@ img {
     height: 200px;
     width: 347px;
 }
+body{
+    background-image: url('https://simplefreethemes.com/wp-content/uploads/2017/04/Beautiful-Norway.jpg');
+    background-size: cover;
+}
