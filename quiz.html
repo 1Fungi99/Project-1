@@ -69,8 +69,11 @@
           <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <!-------------------------->
+        <!-- style changes the length of the bar, not aria-valuenow -->
+        <!-- style="width: /variable/%" -->
+        <!-- $(".progress-bar").attr("style", "width:" + /variable/ + "%") -->
         <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+          <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0"
             aria-valuemax="100"></div>
         <!-------------------------->
         <!-- End of testing -->

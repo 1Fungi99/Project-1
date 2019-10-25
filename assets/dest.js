@@ -22,8 +22,7 @@ $(document).ready(function () {
             tempf = tempf.toFixed(0);
             $(".temp").html("<h5>Temperature: " + temp + "&#176;C (" + tempf + "&#176;F)</h5>");
         });
-
-
+$(".col-sm-4").removeAttr("id");
 
 
     });
