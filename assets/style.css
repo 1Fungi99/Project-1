@@ -1,33 +1,19 @@
-.title {
-    color: black;
-    font-family: "Arial Black", Gadget, sans-serif;
-    font: bolder;
-    font-size: 40px;
-}
-
-h2 {
-    text-align: center;
-    color: white;
-    position: absolute; right: 50px; bottom: 40px;
-    
-}
-
-
-#dropdownMenuButton{
-    background: #112d4e;
-    color: white;
-}
-.container{
-    
-    bottom: 0;
-    background: #3f72af;
-    
-    
-
-}
 body{
-    background-color: #3f72af ;
+    background-image: url('https://simplefreethemes.com/wp-content/uploads/2017/04/Beautiful-Norway.jpg');
+    background-size: cover;
 }
-.startButton{
-    position: absolute; right: 480px; bottom: 55px; 
+img {
+    width: 1100px;
+    height: 625px;
 }
+
+/* Styling for the quiz page
+/* ---------------------------------------- */
+#quizContainer {
+    min-width: 75vw;
+}
+
+#startButton {
+    min-width: 10vw;
+}
+/* ---------------------------------------- */

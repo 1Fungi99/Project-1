@@ -6,90 +6,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  crossorigin="anonymous"></script>
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"></script>
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  crossorigin="anonymous"></script>
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/dest.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/dest.js"></script>
-
-  <title>Travel Shit</title>
-
+  <title>Destinations</title>
 </head>
 
 <body>
-
-
   <nav class="navbar fixed-top" style="background: #4040a1; ">
     <span class="navbar-brand mb-0 h1" style="color: white;">Destination Station</span>
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
-        <a class="nav-link" style="color: white;" href="index.html">Home</a>
+        <a class="nav-link" style="color: white;" href="#">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active" style="color: white;" href="Dest.html">Destinations</a>
       </li>
+      <li class="nav item">
+        <a class="nav-link" style="color: white;" href="quiz.html">Take the Quiz!</a>
+      </li>
     </ul>
   </nav>
-  <br><br><br><br>
+
+  <br>
+  <br>
+  <br>
+
   <div class="container">
     <div class="row">
-    <div class="card col-sm-2" style="width: 18rem;">
-      <div class="card-header" style="font-weight: bold;">
-        Destinations:
+      <div class="card col-sm-2" style="width: 18rem;">
+        <div class="card-header" style="font-weight: bold;">
+          Destinations:
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" data-dest="barcelona" img-src="assets\images\barcelona.jpg">Barcelona</li>
+          <li class="list-group-item" data-dest="berlin" img-src="assets\images\berlin.jpeg">Berlin</li>
+          <li class="list-group-item" data-dest="iceland" img-src="assets\images\iceland.jpg">Iceland</li>
+          <li class="list-group-item" data-dest="london" img-src="assets\images\london.jpg">London</li>
+          <li class="list-group-item" data-dest="paris" img-src="assets\images\paris.jpg">Paris</li>
+          <li class="list-group-item" data-dest="rome" img-src="assets\images\Rome.jpg">Rome</li>
+          <li class="list-group-item" data-dest="salzburg" img-src="assets\images\salzburg.jpeg">Salzburg</li>
+          <li class="list-group-item" data-dest="singapore" img-src="assets\images\singapore.jpg">Singapore</li>
+          <li class="list-group-item" data-dest="tokyo" img-src="assets\images\tokyo.jpg">Tokyo</li>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item" data-dest="barcelona" img-src="assets\images\barcelona.jpg"
-        >Barcelona</li>
-        <li class="list-group-item" data-dest="berlin" img-src="assets\images\berlin.jpeg"
-        >Berlin</li>
-        <li class="list-group-item" data-dest="iceland" img-src="assets\images\iceland.jpg"
-        >Iceland</li>
-        <li class="list-group-item" data-dest="london" img-src="assets\images\london.jpg"
-        >London</li>
-        <li class="list-group-item" data-dest="paris" img-src="assets\images\paris.jpg"
-        >Paris</li>
-        <li class="list-group-item" data-dest="rome" img-src="assets\images\Rome.jpg"
-        >Rome</li>
-        <li class="list-group-item" data-dest="salzburg" img-src="assets\images\salzburg.jpeg"
-        >Salzburg</li>
-        <li class="list-group-item" data-dest="singapore" img-src="assets\images\singapore.jpg"
-        >Singapore</li>
-        <li class="list-group-item" data-dest="tokyo" img-src="assets\images\tokyo.jpg"
-        >Tokyo</li>
-      </ul>
-    </div>
-      <div class="card col-sm-4" id="info">
+      <div class="card col-sm-4" id="background">
         <div class="card-header name" style="font-weight: bold;"></div>
         <br>
         <div class="city"></div>
-        <img class="dest-img" src="http://home.bt.com/images/the-top-pictures-astronauts-took-of-earth-in-2017-136424031379703901-171231133036.jpg">
+        <img class="dest-img"
+          src="http://uppervalleyaviation.com/wp-content/uploads/2018/01/background-transparent.png">
         <div class="card-body">
           <div class="wind"></div>
           <div class="humidity"></div>
           <div class="temp"></div>
         </div>
       </div>
-      <div class="card col-sm-6" id="info"></div>
+      <div class="card col-sm-6" id="info">
+        <div class="card-header" id="city" style="font-weight: bold;">
+          Pick your Destination!!!
+        </div>
 
+      </div>
     </div>
   </div>
-
-
-
-
-
-
 </body>
 
 </html>
