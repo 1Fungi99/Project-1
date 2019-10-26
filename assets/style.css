@@ -17,7 +17,12 @@ h2 {
     position: absolute; right: 50px; bottom: 40px;
  
 }
-
+h5 {
+    color: white;
+}
+p{
+    color: white;
+}
 
 
 /* Styling for the quiz page
