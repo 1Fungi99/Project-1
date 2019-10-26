@@ -22,16 +22,11 @@ $(document).ready(function () {
             //(32°F − 32) × 5/9 = 0°C
             tempf = temp * 9 / 5 + 32
             tempf = tempf.toFixed(0);
-            $(".temp").html("<h5>Temperature: " + temp + "&#176;C (" + tempf + "&#176;F)</h5>");
-
-            $("#city").text("Information on: " + response.name);
-
-            $("#info-page").html();
+            console.log(tempf + " temp")
+            $("#temp").html("<h5>Temperature: " + temp + "&#176;C (" + tempf + "&#176;F)</h5>");
         });
-
-        
         $(".col-sm-4").removeAttr("id");
-        
+
         if (book == false) {
             book = true;
             var div = $("<div>");
@@ -39,20 +34,44 @@ $(document).ready(function () {
             $("#book").append(div);
             $(div).attr("id", "booking");
             $("#booking").text("Where are you coming from?");
-            
+
             var div2 = $("<div>");
             $(div2).attr("class", "card-body");
-            $(div2).html('Local Airport (3 letter code):    <br> <input type="text" id="iAirport" name="iAirport" value="ex: DFW, LAX, etc."> <br> Destination Airport (3 letter code:    <br> <input type="text" name="fAirport" id="fAirport" value="ex: DFW, LAX, etc."> <br> Date of Flight: <br> <input type="text" name="date" value="YYYY-MM-DD"> <br><br> <input type="submit" class="submit" value="Submit">');
+            var local=$("<p>").text('Local Airport (3 letter code):').addClass('localA'); 
+            var localAir=$("<input>").attr({
+                type:"text",
+                id: "iAirport",
+                name: "iAirport",
+                placeholder: "ex: DFW, LAX, etc."
+            });
+            var dest=$("<p>").text("Destination Airport (3 letter code):").addClass('localA');
+            var destAir=$("<input>").attr({
+                type:"text",
+                id: "fAirport",
+                name: "fAirport",
+                placeholder: "ex: DFW, LAX, etc."
+            });
+            var date=$("<p>").text("Date of Flight:").addClass('localA');
+            var dateinput=$("<input>").attr({
+                type:"text",
+                name:"date",
+                placeholder:"YYYY-MM-DD"
+            });
+            var submit=$("<button>").attr({
+                type:"submit",
+                class:"submit localA",
+            }).text("Submit");
+            $(div2).append(local,localAir,dest,destAir,date,dateinput,submit);
             $("#booking").append(div2);
         }
 
     });
-    
-    $(".submit").on("click", function () {
+
+    $(document).on("click",'.sumbit', function() {
         console.log("fire");
         var initial = document.getElementById("iAirport");
         var final = document.getElementById("fAirport");
-        var queryURL2 =	"https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date=2015-04-07&to=LHE&depart-date=2015-03-31&from=DXB";
+        var queryURL2 = "https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date=2015-04-07&to=LHE&depart-date=2015-03-31&from=DXB";
     });
 
 });
