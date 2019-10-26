@@ -5,22 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="assets/app.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    </script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
+    </script> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="assets/style.css">
 
   <title>Quiz Page</title>
 
@@ -33,7 +27,7 @@
     <span class="navbar-brand mb-0 h1" style="color: white;">Destination Station</span>
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
-        <a class="nav-link" style="color: white;" href="index.html">Home</a>
+        <a class="nav-link" style="color: white;" href="#">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" style="color: white;" href="Dest.html">Destinations</a>
@@ -50,43 +44,38 @@
 
   <div class="container text-center" id="quizContainer">
     <div class="jumbotron text-center">
-      <h1 class="display-4">Destination Assessment</h1>
-      <p class="lead">Press the start button to begin the quiz!</p>
+      <h1 class="display-4" id="hide1">Destination Assessment</h1>
+      <div id="qImg"></div>
+      <p class="lead" id="hide2">Press the start button to begin the quiz!</p>
       <hr class="my-4">
-      <a class="btn btn-primary btn-lg" id="startButton" href="#" role="button">Start</a>
-      <div id="quiz">
-        <div id="qImg"></div>
-        <div id="question">
-          <h3>Question</h3>
+      <button type="button" class="btn btn-primary btn-lg" id="start">Start Quiz!</button>
+      <!-- Quiz html will begin here -->
+      <div id="quiz" style="display: none;">
+        <!-- <div id="qImg"></div> -->
+        <div id="question"></div>
+        <br>
+        <div id="choices">
+          <button class="choice" id="yes" onclick="checkAnswer('yes')"></button>
+          <button class="choice" id="no" onclick="checkAnswer('no')"></button>
         </div>
-        <div id="yes"><button>Yes</button></div>
-        <div id="no"><button>No</button></div>
-        <div id="progress">Progress</div>
-
         <!-- Progress bar testing -->
         <!-------------------------->
+        <br>
         <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
         </div>
         <!-------------------------->
-        <!-- style changes the length of the bar, not aria-valuenow -->
-        <!-- style="width: /variable/%" -->
-        <!-- $(".progress-bar").attr("style", "width:" + /variable/ + "%") -->
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0"
-            aria-valuemax="100"></div>
+
         <!-------------------------->
         <!-- End of testing -->
-
-
-        </div>
-
       </div>
     </div>
-
+    <!-- HTML for the destination result screen will begin here -->
 
   </div>
+  </div>
+  <script src="assets/app.js"></script>
 </body>
-<link href="assets/app.js">
 
 </html>
