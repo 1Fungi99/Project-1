@@ -21,8 +21,15 @@ $(document).ready(function () {
             tempf = temp * 9 / 5 + 32
             tempf = tempf.toFixed(0);
             $(".temp").html("<h5>Temperature: " + temp + "&#176;C (" + tempf + "&#176;F)</h5>");
+            
+            $("#city").text("Information on: " + response.name);
+
+            $("#info-page").html();
         });
-$(".col-sm-4").removeAttr("id");
+
+        var queryURL2 =	"https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date=2015-04-07&to=LHE&depart-date=2015-03-31&from=DXB",
+
+        $(".col-sm-4").removeAttr("id");
 
 
     });
