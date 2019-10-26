@@ -7,6 +7,18 @@ img {
     height: 625px;
 }
 
+.startButton{
+    position: absolute; right: 480px; bottom: 55px; 
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    position: absolute; right: 50px; bottom: 40px;
+ 
+}
+
+
 /* Styling for the quiz page
 /* ---------------------------------------- */
 #quizContainer {
