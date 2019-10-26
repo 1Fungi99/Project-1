@@ -7,24 +7,6 @@ img {
     height: 625px;
 }
 
-.startButton{
-    position: absolute; right: 480px; bottom: 55px; 
-}
-
-h2 {
-    text-align: center;
-    color: white;
-    position: absolute; right: 50px; bottom: 40px;
- 
-}
-h5 {
-    color: white;
-}
-p{
-    color: white;
-}
-
-
 /* Styling for the quiz page
 /* ---------------------------------------- */
 #quizContainer {
@@ -33,5 +15,30 @@ p{
 
 #startButton {
     min-width: 10vw;
+}
+
+#qImg {
+    contain: content;
+    max-height: 55vh;
+    object-fit: cover;
+}
+
+.choice {
+    font-size: 20px;
+    background-color: #4040a1;
+    color: white;    
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 100px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.choice:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#start {
+    background-color: #4040a1;
 }
 /* ---------------------------------------- */
