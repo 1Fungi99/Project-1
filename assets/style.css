@@ -18,9 +18,9 @@ img {
 }
 
 #qImg {
-    contain: content;
-    max-height: 55vh;
-    object-fit: cover;
+margin: auto;
+min-width: 70vw;
+
 }
 
 .choice {

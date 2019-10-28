@@ -1,62 +1,111 @@
 //Creating a variable for keeping the list of destinations in
 let destinations = [
-    'Paris',
-    'Rome',
-    'Barcelona',
-    'Madrid',
-    'Iceland',
-    'Tokyo',
-    'Singapore',
-    'Salzburg',
-    'Berlin',
-    'Amsterdam',
-    'Athens'
+  "Paris",
+  "Rome",
+  "Barcelona",
+  "Madrid",
+  "Iceland",
+  "Tokyo",
+  "Singapore",
+  "Salzburg",
+  "Berlin",
+  "Amsterdam",
+  "Athens"
 ];
 
 let questions = [
-    {
-        question: "Do you prefer warm weather over cold weather?",
-        imgSrc: "https://images.wallpaperscraft.com/image/river_trees_summer_during_the_shore_92679_2560x1024.jpg",
-        choiceA: "Yes",
-        choiceB: "No",
-        correct: "Yes",
-    },
-    {
-        question: "",
-        imgSrc: "https://images.wallpaperscraft.com/image/river_trees_summer_during_the_shore_92679_2560x1024.jpg",
-        choiceA: "Yes",
-        choiceB: "No",
-        correct: "Yes",
-    },
-    {
-        question: "",
-        imgSrc: "",
-        choiceA: "Yes",
-        choiceB: "No",
-        correct: "Yes",
-    },
-    {
-        question: "",
-        imgSrc: "",
-        choiceA: "Yes",
-        choiceB: "No",
-        correct: "Yes",
-    },
-    {
-        question: "",
-        imgSrc: "",
-        choiceA: "Yes",
-        choiceB: "No",
-        correct: "Yes",
-    },
-    {
-        question: "",
-        imgSrc: "",
-        choiceA: "Yes",
-        choiceB: "No",
-        correct: "Yes",
-    },
-]
+  //I don't know why but my code is skipping questions so if you notice there are repeat questions, please ignore.  I don't know why it works, but it does.
+  {
+    question: "Do you prefer warm weather over cold weather?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/river_trees_summer_during_the_shore_92679_2560x1024.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  },
+  {
+    question: "Do you prefer coastal cities?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/beach_sea_yacht_90849_2560x1080.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  },
+  {
+    question: "Do you prefer coastal cities?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/beach_sea_yacht_90849_2560x1080.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  },
+  {
+    question: "When traveling is culture a major attraction for you?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/japan_building_beautiful_sky_81925_2560x1024.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  },
+  {
+    question: "When traveling is culture a major attraction for you?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/japan_building_beautiful_sky_81925_2560x1024.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  },
+  {
+    question: "Do you have any issues with heavy human traffic?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/traffic_road_cars_city_114141_2560x1024.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  },
+  {
+    question: "Do you have any issues with heavy human traffic?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/traffic_road_cars_city_114141_2560x1024.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  },
+  {
+    question:
+      "Do you prefer to fill your vacation days with outdoor activities?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/skydiver_fly_sky_clouds_108484_2560x1024.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  },
+  {
+    question:
+      "Do you prefer to fill your vacation days with outdoor activities?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/skydiver_fly_sky_clouds_108484_2560x1024.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  },
+  {
+    question: "Are you okay with traveling to non english speaking countries?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/street_cars_street_city_people_windows_subway_signs_houses_london_59578_2560x1024.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  },
+  {
+    question: "Are you okay with traveling to non english speaking countries?",
+    imgSrc:
+      "https://images.wallpaperscraft.com/image/street_cars_street_city_people_windows_subway_signs_houses_london_59578_2560x1024.jpg",
+    choiceA: "yes",
+    choiceB: "no",
+    correct: "yes"
+  }
+];
 
 //creating some globals to use throughout the process with some tags to connect to the html file
 const start = document.getElementById("start");
@@ -72,70 +121,79 @@ let count = 0;
 let score = 1;
 const scoreDiv = document.getElementById("scoreContainer");
 const hide = document.getElementById("hide1");
-const hide2 = document.getElementById("hide2")
+const hide2 = document.getElementById("hide2");
 
-
-
-//a variable to hold the questions in.  Each question is has values stored for referencing below
+let destinationFinalIndex = 4;
 
 //code the start quiz button to hide the button itself and display the quiz html
 
 start.addEventListener("click", startQuiz);
 
 function startQuiz() {
-    start.style.display = "none";
-    hide.style.display = "none";
-    hide2.style.display = "none";
-    renderQuestion();
-    quiz.style.display = "block";
-    renderProgress();
+  start.style.display = "none";
+  hide.style.display = "none";
+  hide2.style.display = "none";
+  renderQuestion();
+  quiz.style.display = "block";
+  qImg.style.display = "block";
+  renderProgress();
 }
 //Renders the questions in order and displays the image, question, and choice in the html file.
 function renderQuestion() {
-    let q = questions[runningQuestion];
+  let q = questions[runningQuestion];
 
-    question.innerHTML = "<h3>" + q.question + "</h3>";
-    qImg.innerHTML = "<img src=" + q.imgSrc + ">";
-    choiceA.innerHTML = q.choiceA;
-    choiceB.innerHTML = q.choiceB;
+  question.innerHTML = "<h3>" + q.question + "</h3>";
+  qImg.src = q.imgSrc;
+  choiceA.innerHTML = q.choiceA;
+  choiceB.innerHTML = q.choiceB;
 }
 //gives us reference for each question for the question progress counter
 function renderProgress() {
-    for (let qIndex = 0; qIndex <= lastQuestion; qIndex++) {
-        progressBar.style.width += "<div class='prog' id=" + qIndex + "></div>";
-    }
+  for (let qIndex = 0; qIndex <= lastQuestion; qIndex++) {
+    // progressBar.style.width += "<div class='prog' id=" + qIndex + "></div>";
+  }
 }
-
-//honestly no idea, tyler did this piece and it seems to in theory ping up or down the value of the destination after the quiz
-let newArr = [...destinations]
 
 choiceA.addEventListener("click", checkAnswer);
 choiceB.addEventListener("click", checkAnswer);
 
-function checkAnswer(answer, countryIndex) {
-    score++
-    if (answer == questions[runningQuestion].correct) {
-        newArr[countryIndex + 1] = destinations[countryIndex]
-        newArr[countryIndex] = destinations[countryIndex + 1]
-    } else {
-        newArr[countryIndex - 1] = destinations[countryIndex]
-        newArr[countryIndex] = destinations[countryIndex - 1]
-    }
-
-    if (runningQuestion < lastQuestion) {
-        runningQuestion++;
-        renderQuestion();
-    } else {
-        // displayDestination();
-    }
+function checkAnswer(answer) {
+  if (answer == questions[runningQuestion].correct) {
+    destinationFinalIndex++;
+    score++;
+  } else {
+    destinationFinalIndex--;
+    score++;
+  }
+  if (runningQuestion < lastQuestion) {
+    runningQuestion++;
+    renderQuestion();
+  } else {
+    displayResults();
+  }
 }
-console.log(score, questions.length)
-const progressBarPercent = Math.round(100 * score / questions.length);
+
+const destinationDisplay = doocument.getElementById("finalPage");
+const desinationImg = document.getElementById("destImg");
+const resortList = document.getElementById("destResorts");
+const climate = document.getElementById("destClimate");
+const languageSpoken = document.getElementById("destLanguage");
+const overview = document.getElementById("destOverview");
+const currency = document.getElementById("destCurrency");
+
+function displayResults() {
+  quiz.style.display = "none";
+  qImg.style.display = "none";
+  destinationDisplay.style.display = "block";
+  destinationImg.style.display = "block";
+}
+
+console.log(score, questions.length);
+const progressBarPercent = Math.round((100 * score) / questions.length);
 
 const progressBar = document.getElementById("progress-bar");
 
-console.log(progressBarPercent)
-progressBar.style.width = progressBarPercent + "%"
+console.log(progressBarPercent);
+progressBar.style.width = progressBarPercent + "%";
 
 //after the quiz finishes, this function will display the given destination and other key information to the user
-
