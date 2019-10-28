@@ -51,27 +51,67 @@ $(document).ready(function () {
                 name: "fAirport",
                 placeholder: "ex: DFW, LAX, etc."
             });
-            var date=$("<p>").text("Date of Flight:").addClass('localA');
-            var dateinput=$("<input>").attr({
+            var dateDepart=$("<p>").text("Date of Departure:").addClass('localA');
+            var departInput=$("<input>").attr({
                 type:"text",
                 name:"date",
+                id: "depart",
                 placeholder:"YYYY-MM-DD"
             });
-            var submit=$("<button>").attr({
-                type:"submit",
-                class:"submit localA",
-            }).text("Submit");
-            $(div2).append(local,localAir,dest,destAir,date,dateinput,submit);
+            var dateReturn=$("<p>").text("Date of Return:").addClass('localA');
+            var returnInput=$("<input>").attr({
+                type:"text",
+                name:"date",
+                id: "return",
+                placeholder:"YYYY-MM-DD"
+            });
+            var submit=$("<button>").attr("class", "submit localA").text("Submit");
+            $(div2).append(local,localAir,dest,destAir,dateDepart,departInput,dateReturn, returnInput,submit);
             $("#booking").append(div2);
         }
 
     });
 
-    $(document).on("click",'.sumbit', function() {
+    $(document).on("click",'.submit', function(event) {
+        event.preventDefault();
         console.log("fire");
-        var initial = document.getElementById("iAirport");
-        var final = document.getElementById("fAirport");
-        var queryURL2 = "https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date=2015-04-07&to=LHE&depart-date=2015-03-31&from=DXB";
+        var initial = document.getElementById("iAirport"); // departure airport
+        var final = document.getElementById("fAirport"); // destination airport
+        var rDate= document.getElementById("return"); //return date
+        var dDate=document.getElementById("depart"); //departure date
+        // var queryURL2 = "https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date="+rDate+"&to="+final+"&depart-date="+dDate+"&from="+initial;
+
+        // var settings = {
+        //     async: true,
+        //     crossDomain: true,
+        //     url:"https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date="+rDate+"&to="+final+"&depart-date="+dDate+"&from="+initial,
+        //     "url": "https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date=2015-04-07&to=LHE&depart-date=2015-03-31&from=DXB",
+        //     method: "GET",
+        //     headers: {
+        //         "x-rapidapi-host": "siddiq-such-flight-v1.p.rapidapi.com",
+        //         "x-rapidapi-key": "665cad435fmshb30e267a05b4656p1b2f56jsn9be257d087d3"}}
+        // $.ajax(settings).done(function (response) {
+        //     console.log(response);
+        // });
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date=2015-04-07&to=LHE&depart-date=2015-03-31&from=DXB",
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "siddiq-such-flight-v1.p.rapidapi.com",
+                "x-rapidapi-key": "665cad435fmshb30e267a05b4656p1b2f56jsn9be257d087d3"
+            }
+        }
+        
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+        
+
+
+
+
     });
 
 });
