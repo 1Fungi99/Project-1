@@ -1,3 +1,5 @@
+console.log("this is going to look like trash, im so sorry for anyone that has to read this, half our workforce is gone, and Jude and i are working as hard as we can to finish this and its currencly 3:00 in the morning and i need to go to bed, again i am so sorry... <3 JUSTIN :)                              ALSO HONORARY MEMBER: NICK")
+
 //Creating a variable for keeping the list of destinations in
 const destinations = [
   {

@@ -1,13 +1,4 @@
-console.log("this is going to look like trash, im so sorry for anyone that has to read this, half our workforce is gone and Jude and i are working as hard as we can to finish this and its currencly 2:44 in the morning and i need to go to bed, again i am so sorry... <3 JUSTIN :)")
-
-
-
-
-
-
-
-
-
+console.log("this is going to look like trash, im so sorry for anyone that has to read this, half our workforce is gone, and Jude and i are working as hard as we can to finish this and its currencly 3:00 in the morning and i need to go to bed, again i am so sorry... <3 JUSTIN :)                              ALSO HONORARY MEMBER: NICK")
 
 $(document).ready(function () {
     const destinations = [
@@ -88,7 +79,7 @@ $(document).ready(function () {
         var h6=$("<h7>").text(destinations[$(this).attr("data-index")].overview).attr({
             class: "text-center help"
         });
-        var sorryMonica=$("<button>").text("Check this out!").attr({
+        var sorryMonica=$("<a>").text("Check this out!").attr({
             href: destinations[$(this).attr("data-index")].travelGuide
         });
         $("#info").append(h6,sorryMonica);
