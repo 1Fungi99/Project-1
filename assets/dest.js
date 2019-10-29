@@ -33,7 +33,7 @@ $(document).ready(function () {
             $(div).attr("class", "card-header");
             $("#book").append(div);
             $(div).attr("id", "booking");
-            $("#booking").text("Where are you coming from?");
+            $("#booking").text("Currency Conversion");
 
             var div2 = $("<div>");
             $(div2).attr("class", "card-body");
@@ -61,6 +61,8 @@ $(document).ready(function () {
             var submit = $("<button>").attr("class", "submit localA").text("Submit");
             $(div2).append(local, localAir, dest, destAir, dateDepart, departInput, submit);
             $("#booking").append(div2);
+
+            $("#book-view").html("<h2>'How Much Ya Need?'</h2>");
         }
 
     });
@@ -85,7 +87,7 @@ $(document).ready(function () {
             "data": {
                 "from-type": initial.toUpperCase(),
                 "to-type": final.toUpperCase(),
-                "from-value": parseInt(rDate)
+                "from-value": parseInt(rDate).toFixed(2)
             }
         }
         
