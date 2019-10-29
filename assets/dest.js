@@ -1,16 +1,45 @@
+console.log("this is going to look like trash, im so sorry for anyone that has to read this, half our workforce is gone and Jude and i are working as hard as we can to finish this and its currencly 2:44 in the morning and i need to go to bed, again i am so sorry... <3 JUSTIN :)")
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function () {
     const destinations = [
         {
-            location: "salzburg",
-            language: "German",
-            overview: "Salzburg is an Austrian city on the border of Germany, with views of the Eastern Alps. The city is divided by the Salzach River, with medieval and baroque buildings of the pedestrian Altstadt (Old City) on its left bank, facing the 19th-century Neustadt (New City) on its right. The Altstadt birthplace of famed composer Mozart is preserved as a museum displaying his childhood instruments.",
-            travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F0b1mf&dest_src",
+            location: "amsterdam",
+            language: "Dutch",
+            overview: "Amsterdam is the Netherlands’ capital, known for its artistic heritage, elaborate canal system and narrow houses with gabled facades, legacies of the city’s 17th-century Golden Age. Its Museum District houses the Van Gogh Museum, works by Rembrandt and Vermeer at the Rijksmuseum, and modern art at the Stedelijk. Cycling is key to the city’s character, and there are numerous bike paths.",
+            travelGuide: "https://www.google.com/destination?dest_mid=/m/0k3p&dest_src",
+        },
+        {
+            location: "athens",
+            language: "Greek",
+            overview: "Athens is the capital of Greece. It was also at the heart of Ancient Greece, a powerful civilization and empire. The city is still dominated by 5th-century BC landmarks, including the Acropolis, a hilltop citadel topped with ancient buildings like the colonnaded Parthenon temple. The Acropolis Museum, along with the National Archaeological Museum, preserves sculptures, vases, jewelry and more from Ancient Greece.",
+            travelGuide: "https://www.google.com/destination?dest_mid=/m/0n2z&dest_src",
         },
         {
             location: "barcelona",
             language: "Spanish",
             overview: "Barcelona has some of the most unique and inspiring architecture in the world, so a tour of the city's parks, museums and churches is a must. Start your days off with tours of Antoni Gaudí's whimsical architecture, including Casa Batlló, La Sagrada Familia and Park Güell.",
             travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F01f62&dest_src",
+        },
+        {
+            location: "berlin",
+            language: "German",
+            overview: "Berlin, Germany’s capital, dates to the 13th century. Reminders of the city's turbulent 20th-century history include its Holocaust memorial and the Berlin Wall's graffitied remains. Divided during the Cold War, its 18th-century Brandenburg Gate has become a symbol of reunification. The city's also known for its art scene and modern landmarks like the gold-colored, swoop-roofed Berliner Philharmonie, built in 1963.",
+            travelGuide: "https://www.google.com/destination?dest_mid=/m/0156q&dest_src",
+        },
+        {
+            location: "iceland",
+            language: "Icelandic",
+            overview: "Iceland, a Nordic island nation, is defined by its dramatic landscape with volcanoes, geysers, hot springs and lava fields. Massive glaciers are protected in Vatnajökull and Snæfellsjökull national parks. Most of the population lives in the capital, Reykjavik, which runs on geothermal power and is home to the National and Saga museums, tracing Iceland’s Viking history.",
+            travelGuide: "https://www.google.com/destination?dest_mid=/m/03rj0&dest_src",
         },
         {
             location: "madrid",
@@ -25,10 +54,16 @@ $(document).ready(function () {
             travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F05qtj&dest_src",
         },
         {
-            location: "tokyo",
-            language: "Japanese",
-            overview: "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
-            travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F07dfk&dest_src",
+            location: "rome",
+            language: "Italian",
+            overview: "Rome, Italy’s capital, is a sprawling, cosmopolitan city with nearly 3,000 years of globally influential art, architecture and culture on display. Ancient ruins such as the Forum and the Colosseum evoke the power of the former Roman Empire. Vatican City, headquarters of the Roman Catholic Church, has St. Peter’s Basilica and the Vatican Museums, which house masterpieces such as Michelangelo’s Sistine Chapel frescoes.",
+            travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F06c62&dest_src",
+        },
+        {
+            location: "salzburg",
+            language: "German",
+            overview: "Salzburg is an Austrian city on the border of Germany, with views of the Eastern Alps. The city is divided by the Salzach River, with medieval and baroque buildings of the pedestrian Altstadt (Old City) on its left bank, facing the 19th-century Neustadt (New City) on its right. The Altstadt birthplace of famed composer Mozart is preserved as a museum displaying his childhood instruments.",
+            travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F0b1mf&dest_src",
         },
         {
             location: "singapore",
@@ -37,40 +72,27 @@ $(document).ready(function () {
             travelGuide: "https://www.google.com/destination?dest_mid=/m/06t2t&dest_src",
         },
         {
-            location: "rome",
-            language: "Italian",
-            overview: "Rome, Italy’s capital, is a sprawling, cosmopolitan city with nearly 3,000 years of globally influential art, architecture and culture on display. Ancient ruins such as the Forum and the Colosseum evoke the power of the former Roman Empire. Vatican City, headquarters of the Roman Catholic Church, has St. Peter’s Basilica and the Vatican Museums, which house masterpieces such as Michelangelo’s Sistine Chapel frescoes.",
-            travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F06c62&dest_src",
-        },
-        {
-            location: "berlin",
-            language: "German",
-            overview: "Berlin, Germany’s capital, dates to the 13th century. Reminders of the city's turbulent 20th-century history include its Holocaust memorial and the Berlin Wall's graffitied remains. Divided during the Cold War, its 18th-century Brandenburg Gate has become a symbol of reunification. The city's also known for its art scene and modern landmarks like the gold-colored, swoop-roofed Berliner Philharmonie, built in 1963.",
-            travelGuide: "https://www.google.com/destination?dest_mid=/m/0156q&dest_src",
-        },
-        {
-            location: "amsterdam",
-            language: "Dutch",
-            overview: "Amsterdam is the Netherlands’ capital, known for its artistic heritage, elaborate canal system and narrow houses with gabled facades, legacies of the city’s 17th-century Golden Age. Its Museum District houses the Van Gogh Museum, works by Rembrandt and Vermeer at the Rijksmuseum, and modern art at the Stedelijk. Cycling is key to the city’s character, and there are numerous bike paths.",
-            travelGuide: "https://www.google.com/destination?dest_mid=/m/0k3p&dest_src",
-        },
-        {
-            location: "athens",
-            language: "Greek",
-            overview: "Athens is the capital of Greece. It was also at the heart of Ancient Greece, a powerful civilization and empire. The city is still dominated by 5th-century BC landmarks, including the Acropolis, a hilltop citadel topped with ancient buildings like the colonnaded Parthenon temple. The Acropolis Museum, along with the National Archaeological Museum, preserves sculptures, vases, jewelry and more from Ancient Greece.",
-            travelGuide: "https://www.google.com/destination?dest_mid=/m/0n2z&dest_src",
-        },
-        {
-            location: "iceland",
-            language: "Icelandic",
-            overview: "Iceland, a Nordic island nation, is defined by its dramatic landscape with volcanoes, geysers, hot springs and lava fields. Massive glaciers are protected in Vatnajökull and Snæfellsjökull national parks. Most of the population lives in the capital, Reykjavik, which runs on geothermal power and is home to the National and Saga museums, tracing Iceland’s Viking history.",
-            travelGuide: "https://www.google.com/destination?dest_mid=/m/03rj0&dest_src",
+            location: "tokyo",
+            language: "Japanese",
+            overview: "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
+            travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F07dfk&dest_src",
         },
     ];
 
     var book = false;
 
     $(".list-group-item").on("click", function () {
+        console.log($(this).attr("data-index")); //works
+        $(".help").empty();
+        $(".sorry").empty().text("Overview:");
+        var h6=$("<h7>").text(destinations[$(this).attr("data-index")].overview).attr({
+            class: "text-center help"
+        });
+        var sorryMonica=$("<button>").text("Check this out!").attr({
+            href: destinations[$(this).attr("data-index")].travelGuide
+        });
+        $("#info").append(h6,sorryMonica);
+
         $(".name").empty();
         $(".name").text("Your Chosen Destination:");
         $(".dest-img").attr("src", $(this).attr("img-src"));
@@ -95,6 +117,7 @@ $(document).ready(function () {
             $("#temp").html("<h5>Temperature: " + temp + "&#176;C (" + tempf + "&#176;F)</h5>");
         });
         $(".col-sm-4").removeAttr("id");
+
 
         if (book == false) {
             book = true;
@@ -182,20 +205,6 @@ $(document).ready(function () {
             var eq = rDate / response.result;
             eq = eq.toFixed(2);
             $("#conversion").text("Conversion Rate is: " + eq + " " + final.toUpperCase() + " = 1 " + initial.toUpperCase());
-
-
-
-
-
-
-
-
         });
-
-
-
-
-
     });
-
 });
