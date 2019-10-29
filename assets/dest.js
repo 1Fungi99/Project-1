@@ -152,7 +152,7 @@ $(document).ready(function () {
             "method": "POST",
             "headers": {
                 "x-rapidapi-host": "community-neutrino-currency-conversion.p.rapidapi.com",
-                "x-rapidapi-key": "665cad435fmshb30e267a05b4656p1b2f56jsn9be257d087d3",
+                "x-rapidapi-key": "bcd506b97bmsh96b21c686229107p1dfd40jsnc707c052eb7b",
                 "content-type": "application/x-www-form-urlencoded"
             },
             "data": {
