@@ -40,8 +40,8 @@
   <br>
   <br>
 
-  <div class="container text-center" id="quizContainer">
-    <div class="jumbotron text-center">
+  <div class="container text-center">
+    <div class="jumbotron text-center" id="quizContainer" style="display: block;">
       <h1 class="display-4" id="hide1">Destination Assessment</h1>
       <img src="" id="qImg" class="img-fluid" style="display: none;" alt="Question Image">
       <p class="lead" id="hide2">Press the start button to begin the quiz!</p>
@@ -55,30 +55,27 @@
           <button class="choice" id="yes" onclick="checkAnswer('yes')"></button>
           <button class="choice" id="no" onclick="checkAnswer('no')"></button>
         </div>
-        <!-- Progress bar testing -->
-        <!-------------------------->
         <br>
         <div class="progress">
           <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
             aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
         </div>
       </div>
-      <!-- HTML for the destination result screen will begin here -->
-      <div id="finalPage" style="display: none;">
-        <img src="" id="destImg" class="img-fluid" style="display: none;" alt="Question Image">
-        <div id="destName">name</div>
-        <div id="destResorts">resorts</div>
-        <div id="destClimate">climate</div>
-        <div id="destLanguage">language</div>
-        <div id="destCurrency">currency</div>
-        <div id="destOverview">overview</div>
-      </div>
+
     </div>
-
-
+    <div class="jumbotron text-center" id="destinationResults" style="display: none;">
+      <h1 class="display-4"></h1>
+      <hr class="my-4">
+      <img src="" id="destImg" class="img-fluid" style="display: none;" alt="Question Image">
+      <div id="destName">name</div>
+      <div id="destResorts">resorts</div>
+      <div id="destClimate">climate</div>
+      <div id="destLanguage">language</div>
+      <div id="destCurrency">currency</div>
+      <div id="destOverview">overview</div>
+    </div>
   </div>
-  </div>
+
   <script src="assets/app.js"></script>
 </body>
-
 </html>

@@ -1,16 +1,16 @@
 //Creating a variable for keeping the list of destinations in
 let destinations = [
-  "Paris",
-  "Rome",
+  "Salzburg",
   "Barcelona",
   "Madrid",
-  "Iceland",
+  "Paris",
   "Tokyo",
   "Singapore",
-  "Salzburg",
+  "Rome",
   "Berlin",
   "Amsterdam",
-  "Athens"
+  "Athens",
+  "Iceland",
 ];
 
 let questions = [
@@ -26,7 +26,7 @@ let questions = [
   {
     question: "Do you prefer coastal cities?",
     imgSrc:
-      "https://images.wallpaperscraft.com/image/beach_sea_yacht_90849_2560x1080.jpg",
+      "https://images.wallpaperscraft.com/image/beach_palm_sand_138174_2560x1024.jpg",
     choiceA: "yes",
     choiceB: "no",
     correct: "yes"
@@ -34,7 +34,7 @@ let questions = [
   {
     question: "Do you prefer coastal cities?",
     imgSrc:
-      "https://images.wallpaperscraft.com/image/beach_sea_yacht_90849_2560x1080.jpg",
+      "https://images.wallpaperscraft.com/image/beach_palm_sand_138174_2560x1024.jpg",
     choiceA: "yes",
     choiceB: "no",
     correct: "yes"
@@ -123,8 +123,6 @@ const scoreDiv = document.getElementById("scoreContainer");
 const hide = document.getElementById("hide1");
 const hide2 = document.getElementById("hide2");
 
-let destinationFinalIndex = 4;
-
 //code the start quiz button to hide the button itself and display the quiz html
 
 start.addEventListener("click", startQuiz);
@@ -157,13 +155,27 @@ function renderProgress() {
 choiceA.addEventListener("click", checkAnswer);
 choiceB.addEventListener("click", checkAnswer);
 
+const destinationDisplay = document.getElementById("destinationResults");
+const desinationImg = document.getElementById("destImg");
+const resortList = document.getElementById("destResorts");
+const climate = document.getElementById("destClimate");
+const languageSpoken = document.getElementById("destLanguage");
+const overview = document.getElementById("destOverview");
+const currency = document.getElementById("destCurrency");
+const quizEnd = document.getElementById("quizContainer")
+
+function displayResults() {
+  quizEnd.style.display = "none";
+  destinationDisplay.style.display = "block";
+}
+
 function checkAnswer(answer) {
   if (answer == questions[runningQuestion].correct) {
-    destinationFinalIndex++;
     score++;
+    destinations.splice(1, 1)
   } else {
-    destinationFinalIndex--;
     score++;
+    destinations.splice(-1, 1)
   }
   if (runningQuestion < lastQuestion) {
     runningQuestion++;
@@ -173,22 +185,6 @@ function checkAnswer(answer) {
   }
 }
 
-const destinationDisplay = doocument.getElementById("finalPage");
-const desinationImg = document.getElementById("destImg");
-const resortList = document.getElementById("destResorts");
-const climate = document.getElementById("destClimate");
-const languageSpoken = document.getElementById("destLanguage");
-const overview = document.getElementById("destOverview");
-const currency = document.getElementById("destCurrency");
-
-function displayResults() {
-  quiz.style.display = "none";
-  qImg.style.display = "none";
-  destinationDisplay.style.display = "block";
-  destinationImg.style.display = "block";
-}
-
-console.log(score, questions.length);
 const progressBarPercent = Math.round((100 * score) / questions.length);
 
 const progressBar = document.getElementById("progress-bar");
