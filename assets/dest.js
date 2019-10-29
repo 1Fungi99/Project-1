@@ -75,7 +75,9 @@ $(document).ready(function () {
     $(".list-group-item").on("click", function () {
         console.log($(this).attr("data-index")); //works
         $(".help").empty();
+        $("#info").empty();
         $(".sorry").empty().text("Overview:");
+
         var h6=$("<h7>").text(destinations[$(this).attr("data-index")].overview).attr({
             class: "text-center help"
         });
