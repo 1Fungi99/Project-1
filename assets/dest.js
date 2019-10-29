@@ -93,8 +93,12 @@ $(document).ready(function () {
         
         $.ajax(settings).done(function (response) {
             console.log(response);
-            var newDiv=$("<div>")
-            $("#book-view")
+            var newDiv=$("<div>").attr({
+                id: "book-title",
+                
+            });
+            $("#book-view").empty();
+
 
         });
 
