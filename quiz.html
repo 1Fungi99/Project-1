@@ -52,8 +52,8 @@
         <div id="question"></div>
         <br>
         <div id="choices">
-          <button class="choice" id="yes" onclick="checkAnswer('yes')"></button>
-          <button class="choice" id="no" onclick="checkAnswer('no')"></button>
+          <button class="choice" id="yes"></button>
+          <button class="choice" id="no"></button>
         </div>
         <br>
         <div class="progress">
@@ -64,14 +64,11 @@
 
     </div>
     <div class="jumbotron text-center" id="destinationResults" style="display: none;">
-      <h1 class="display-4"></h1>
+      <h1 class="display-4" id="destinationHead"></h1>
       <hr class="my-4">
       <img src="" id="destImg" class="img-fluid" style="display: none;" alt="Question Image">
-      <div id="destName">name</div>
-      <div id="destResorts">resorts</div>
-      <div id="destClimate">climate</div>
+      <div id="destGuide">Guide</div>
       <div id="destLanguage">language</div>
-      <div id="destCurrency">currency</div>
       <div id="destOverview">overview</div>
     </div>
   </div>
