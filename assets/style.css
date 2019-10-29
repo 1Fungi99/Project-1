@@ -12,6 +12,14 @@ img {
     min-width: 10vw;
 }
 
+h2 {
+    text-align: center;
+    color: white;
+    position: absolute; right: 50px; bottom: 40px;
+
+}
+
+
 .choice {
     font-size: 20px;
     background-color: #4040a1;
