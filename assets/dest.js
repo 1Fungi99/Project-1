@@ -75,7 +75,8 @@ $(document).ready(function () {
     $(".list-group-item").on("click", function () {
         console.log($(this).attr("data-index")); //works
         $(".help").empty();
-        $("#info").empty();
+        $(".im-done").empty();
+        $(".sorry-tyler").empty();
         $(".sorry").empty().text("Overview:");
 
         var h6=$("<h7>").text(destinations[$(this).attr("data-index")].overview).attr({
@@ -84,7 +85,8 @@ $(document).ready(function () {
         var sorryMonica=$("<a>").text("Check this out!").attr({
             href: destinations[$(this).attr("data-index")].travelGuide
         });
-        $("#info").append(h6,sorryMonica);
+        $(".im-done").append(h6);
+        $(".sorry-tyler").append(sorryMonica);
 
         $(".name").empty();
         $(".name").text("Your Chosen Destination:");
