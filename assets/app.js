@@ -210,7 +210,7 @@ const quizEnd = document.getElementById("quizContainer")
 function displayResults() {
   quizEnd.style.display = "none";
   destinationDisplay.style.display = "block";
-  destinationHead.innerText = destinations.location;
+  destinationHead.innerText = destinations[0].location;
 
 
 }
