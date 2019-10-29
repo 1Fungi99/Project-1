@@ -37,77 +37,65 @@ $(document).ready(function () {
 
             var div2 = $("<div>");
             $(div2).attr("class", "card-body");
-            var local=$("<p>").text('Local Airport (3 letter code):').addClass('localA'); 
-            var localAir=$("<input>").attr({
-                type:"text",
-                id: "iAirport",
-                name: "iAirport",
-                placeholder: "ex: DFW, LAX, etc."
+            var local = $("<p>").text('Your Current Currency:').addClass('localA');
+            var localAir = $("<input>").attr({
+                type: "text",
+                id: "currencyI",
+                name: "currencyI",
+                placeholder: "USD, GBP, EUR, etc."
             });
-            var dest=$("<p>").text("Destination Airport (3 letter code):").addClass('localA');
-            var destAir=$("<input>").attr({
-                type:"text",
-                id: "fAirport",
-                name: "fAirport",
-                placeholder: "ex: DFW, LAX, etc."
+            var dest = $("<p>").text("Currency Converted To:").addClass('localA');
+            var destAir = $("<input>").attr({
+                type: "text",
+                id: "currencyF",
+                name: "currencyF",
+                placeholder: "USD, GBP, EUR, etc."
             });
-            var dateDepart=$("<p>").text("Date of Departure:").addClass('localA');
-            var departInput=$("<input>").attr({
-                type:"text",
-                name:"date",
-                id: "depart",
-                placeholder:"YYYY-MM-DD"
+            var dateDepart = $("<p>").text("How Much Do You Want To Convert:").addClass('localA');
+            var departInput = $("<input>").attr({
+                type: "text",
+                name: "convert",
+                id: "convert",
+                placeholder: "$ XX.XX"
             });
-            var dateReturn=$("<p>").text("Date of Return:").addClass('localA');
-            var returnInput=$("<input>").attr({
-                type:"text",
-                name:"date",
-                id: "return",
-                placeholder:"YYYY-MM-DD"
-            });
-            var submit=$("<button>").attr("class", "submit localA").text("Submit");
-            $(div2).append(local,localAir,dest,destAir,dateDepart,departInput,dateReturn, returnInput,submit);
+            var submit = $("<button>").attr("class", "submit localA").text("Submit");
+            $(div2).append(local, localAir, dest, destAir, dateDepart, departInput, submit);
             $("#booking").append(div2);
         }
 
     });
 
-    $(document).on("click",'.submit', function(event) {
+    $(document).on("click", '.submit', function (event) {
         event.preventDefault();
         console.log("fire");
-        var initial = document.getElementById("iAirport"); // departure airport
-        var final = document.getElementById("fAirport"); // destination airport
-        var rDate= document.getElementById("return"); //return date
-        var dDate=document.getElementById("depart"); //departure date
-        // var queryURL2 = "https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date="+rDate+"&to="+final+"&depart-date="+dDate+"&from="+initial;
+        var initial = $("#currencyI").val().trim(); // initial
+        var final = $("#currencyF").val().trim() // final
+        var rDate = $("#convert").val().trim() // conversion
 
-        // var settings = {
-        //     async: true,
-        //     crossDomain: true,
-        //     url:"https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date="+rDate+"&to="+final+"&depart-date="+dDate+"&from="+initial,
-        //     "url": "https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date=2015-04-07&to=LHE&depart-date=2015-03-31&from=DXB",
-        //     method: "GET",
-        //     headers: {
-        //         "x-rapidapi-host": "siddiq-such-flight-v1.p.rapidapi.com",
-        //         "x-rapidapi-key": "665cad435fmshb30e267a05b4656p1b2f56jsn9be257d087d3"}}
-        // $.ajax(settings).done(function (response) {
-        //     console.log(response);
-        // });
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://siddiq-such-flight-v1.p.rapidapi.com/search?return-date=2015-04-07&to=LHE&depart-date=2015-03-31&from=DXB",
-            "method": "GET",
+            "url": "https://community-neutrino-currency-conversion.p.rapidapi.com/convert",
+            "method": "POST",
             "headers": {
-                "x-rapidapi-host": "siddiq-such-flight-v1.p.rapidapi.com",
-                "x-rapidapi-key": "665cad435fmshb30e267a05b4656p1b2f56jsn9be257d087d3"
+                "x-rapidapi-host": "community-neutrino-currency-conversion.p.rapidapi.com",
+                "x-rapidapi-key": "665cad435fmshb30e267a05b4656p1b2f56jsn9be257d087d3",
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+                "from-type": initial.toUpperCase(),
+                "to-type": final.toUpperCase(),
+                "from-value": parseInt(rDate)
             }
         }
         
         $.ajax(settings).done(function (response) {
             console.log(response);
+            var newDiv=$("<div>")
+            $("#book-view")
+
         });
-        
+
 
 
 
