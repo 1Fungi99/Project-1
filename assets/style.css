@@ -7,20 +7,9 @@ img {
     height: 625px;
 }
 
-/* Styling for the quiz page
-/* ---------------------------------------- */
-#quizContainer {
-    min-width: 75vw;
-}
 
 #startButton {
     min-width: 10vw;
-}
-
-#qImg {
-margin: auto;
-min-width: 70vw;
-
 }
 
 .choice {
@@ -41,4 +30,5 @@ min-width: 70vw;
 #start {
     background-color: #4040a1;
 }
-/* ---------------------------------------- */
+
+
