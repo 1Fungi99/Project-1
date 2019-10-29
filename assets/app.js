@@ -5,7 +5,7 @@ const destinations = [
   {
     location: "Salzburg",
     language: "Language Spoken : German",
-    overview: "Salzburg is an Austrian city on the border of Germany, with views of the Eastern Alps. The city is divided by the Salzach River, with medieval and baroque buildings of the pedestrian Altstadt (Old City) on its left bank, facing the 19th-century Neustadt (New City) on its right. The Altstadt birthplace of famed composer Mozart is preserved as a museum displaying his childhood instruments.",
+    overview: "Salzburg has become somewhat of a mecca for classical music and you can feel Mozart's influence all around the city. The streets are alive with beautiful live music and there are talented musicians around every corner",
     travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F0b1mf&dest_src",
     destinationImgUrl: "https://images.wallpaperscraft.com/image/salzburg_austria_night_top_view_streets_buildings_102468_1920x1200.jpg",
   },
@@ -26,14 +26,14 @@ const destinations = [
   {
     location: "Paris",
     language: "Language Spoken : French",
-    overview: "he City of Light draws millions of visitors every year with its unforgettable ambiance. Of course, the divine cuisine and vast art collections deserve some of the credit as well. The gentle River Seine rambles through the city, flanked by stately museums, centuries-old churches, and blocks of Rococo- and Neoclassical-design architecture, further enhanced by cascading trees and glowing streetlamps.",
+    overview: "The City of Light draws millions of visitors every year with its unforgettable ambiance. Of course, the divine cuisine and vast art collections deserve some of the credit as well. The gentle River Seine rambles through the city, flanked by stately museums, centuries-old churches, and blocks of Rococo- and Neoclassical-design architecture, further enhanced by cascading trees and glowing streetlamps.",
     travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F05qtj&dest_src",
     destinationImgUrl: "https://images.wallpaperscraft.com/image/paris_tower_city_79284_1920x1080.jpg",
   },
   {
     location: "Tokyo",
     language: "Language Spoken : Japanese",
-    overview: "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
+    overview: "Animated is perhaps the best word to describe Tokyo. Crazy about its anime, Japan's mega city is constantly buzzing with movement – feet clacking down sidewalks, cars zooming along streets, subway trains humming below ground, ships cruising in and out.",
     travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F07dfk&dest_src",
     destinationImgUrl: "https://images.wallpaperscraft.com/image/night_city_city_lights_tokyo_122633_1920x1080.jpg",
   },
@@ -47,14 +47,14 @@ const destinations = [
   {
     location: "Rome",
     language: "Language Spoken : Italian",
-    overview: "Rome, Italy’s capital, is a sprawling, cosmopolitan city with nearly 3,000 years of globally influential art, architecture and culture on display. Ancient ruins such as the Forum and the Colosseum evoke the power of the former Roman Empire. Vatican City, headquarters of the Roman Catholic Church, has St. Peter’s Basilica and the Vatican Museums, which house masterpieces such as Michelangelo’s Sistine Chapel frescoes.",
+    overview: "Italy's capital city, Rome is also known for a history that dates back to the eras of Octavian, Julius Caesar and Hadrian, among others. Left behind are structures like the Pantheon, the Roman Forum and dozens of churches, among other historic gems.",
     travelGuide: "https://www.google.com/travel/guide?dest_mid=%2Fm%2F06c62&dest_src",
     destinationImgUrl: "https://images.wallpaperscraft.com/image/rome_italy_coliseum_landscape_city_59248_1920x1080.jpg",
   },
   {
     location: "Berlin",
     language: "Language Spoken : German",
-    overview: "Berlin, Germany’s capital, dates to the 13th century. Reminders of the city's turbulent 20th-century history include its Holocaust memorial and the Berlin Wall's graffitied remains. Divided during the Cold War, its 18th-century Brandenburg Gate has become a symbol of reunification. The city's also known for its art scene and modern landmarks like the gold-colored, swoop-roofed Berliner Philharmonie, built in 1963.",
+    overview: "More than two decades since the fall of the Berlin Wall, the city basks in a cultural renaissance that boasts everything from museums and fashion to food and nightclubs. But that's not to say that this city has forgotten its dark past; in fact, attractions like The Memorial to the Murdered Jews of Europe, the Topography of Terror and the Checkpoint Charlie Museum are evidence of its steadfast reverence.",
     travelGuide: "https://www.google.com/destination?dest_mid=/m/0156q&dest_src",
     destinationImgUrl: "https://images.wallpaperscraft.com/image/germany_berlin_potsdamer_platz_morning_building_architecture_47743_1920x1200.jpg",
   },
