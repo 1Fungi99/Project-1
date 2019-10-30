@@ -162,25 +162,16 @@ $(document).ready(function () {
         var initial = $("#currencyI").val().trim(); // initial
         var final = $("#currencyF").val().trim() // final
         var rDate = $("#convert").val().trim() // conversion
-
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://community-neutrino-currency-conversion.p.rapidapi.com/convert",
-            "method": "POST",
+            "url": "https://fixer-fixer-currency-v1.p.rapidapi.com/convert?from="+initial+"&to="+final+"&amount="+rDate,
+            "method": "GET",
             "headers": {
-                "x-rapidapi-host": "community-neutrino-currency-conversion.p.rapidapi.com",
-                "x-rapidapi-key": "bcd506b97bmsh96b21c686229107p1dfd40jsnc707c052eb7b",
-                "content-type": "application/x-www-form-urlencoded"
-            },
-            "data": {
-                "from-type": initial.toUpperCase(),
-                "to-type": final.toUpperCase(),
-                "from-value": parseInt(rDate).toFixed(2)
+                "x-rapidapi-host": "fixer-fixer-currency-v1.p.rapidapi.com",
+                "x-rapidapi-key": "bcd506b97bmsh96b21c686229107p1dfd40jsnc707c052eb7b"
             }
         }
-
-        // currency to/currency from == xxx currency to = 1.00 currency from        IMPORTANT
 
         $.ajax(settings).done(function (response) {
 
@@ -195,8 +186,9 @@ $(document).ready(function () {
                 id: "conversion"
             });
             $("#book-view").append(newDiv, newDiv2);
+            var b=response.result.toFixed(2);
 
-            $("#converted").text("You will have: " + response.result + "  " + final.toUpperCase());
+            $("#converted").text("You will have: " + b + "  " + final.toUpperCase());
             var eq = rDate / response.result;
             eq = eq.toFixed(2);
             $("#conversion").text("Conversion Rate is: " + eq + " " + final.toUpperCase() + " = 1 " + initial.toUpperCase());
